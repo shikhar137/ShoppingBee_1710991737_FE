@@ -1,0 +1,76 @@
+<app-nav-bar></app-nav-bar>
+<html>
+<form>
+  
+    <div class="input-group mb-3 mt-3 searchbar">
+          <input type="text" class="form-control" placeholder="Search" id="mail" name="email">
+          <div class="input-group-append">
+            <span class="input-group-text bg-dark sbutton q"><i class= "fa fa-search "></i></span>
+          </div>
+        </div>
+        </form>
+<nav class="navbar navbar-expand-sm bg-light ">
+    <ul class="navbar-nav t">
+        <li class="nav-item">
+            <a class="nav-link j " href="#"><i class= "fa fa-home" style="font-size:22px"></i>&nbsp;&nbsp;Home</a>
+        </li>
+        <li class="nav-item">
+              <a class="nav-link j" href="#"><i class= "fa fa-television" style="font-size:22px"></i>&nbsp;&nbsp;Electronics</a>
+          </li>
+          <li class="nav-item">
+                  <a class="nav-link j" href="#"><i class= "fa fa-yelp" style="font-size:22px"></i>&nbsp;&nbsp;Clothing</a>
+              </li>
+              <li class="nav-item">
+                      <a class="nav-link j" href="#"><i class= "fa fa-soccer-ball-o" style="font-size:22px"></i>&nbsp;&nbsp;Sports</a>
+                  </li>
+                  <li class="nav-item">
+                          <a class="nav-link j" href="#"><i class= "fa fa-book" style="font-size:22px"></i>&nbsp;&nbsp;Books</a>
+                      </li>
+    </ul>
+</nav>
+<div class=" x ">
+    <div class =" filter ">
+        <div class = " sub-box ">
+            
+            <h5 class ="d1"><b><i>Price Filters</i></b></h5>
+            <br>
+            <form class="g">
+
+                    <input type="checkbox" name="range" value="0">&nbsp;&nbsp;&nbsp;<b>0-500</b><br /><br />
+                    <input type="checkbox" name="range" value="0">&nbsp;&nbsp;&nbsp;<b>500-1000</b><br /><br />
+                    <input type="checkbox" name="range" value="0">&nbsp;&nbsp;&nbsp;<b>1000-2000</b><br /><br />
+                    <input type="checkbox" name="range" value="0">&nbsp;&nbsp;&nbsp;<b>More Than 2000</b><br /><br />
+                
+                </form>
+        </div>
+    </div>
+    <div class="container-fluid">
+            <div class="row my-5">
+            
+                  <div class="col-md-3" *ngFor="let y of products">
+                  <div class="card" >
+              <img class="card-img-top im"  src="../../assets/Images/{{y.image}}" style="width:100%">
+              <div class="card-body">
+              <h2 class="card-title" (click)="onclick1(y.id)"> {{y.name}} </h2>
+              <p class="card-text" style="color: grey;"> Rs. {{y.price}}</p>
+              <p class="card-text">{{y.price}}</p>
+              <button class="btn btn-primary" (click)="addtocart(d.id)">Add to Cart</button>
+              </div>
+            </div>
+            <br>
+            </div>
+            
+            </div>
+            </div>
+                    
+            
+
+   
+                                 
+                              
+
+
+</div>
+                                
+
+    </html>

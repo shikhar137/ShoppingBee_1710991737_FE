@@ -1,0 +1,61 @@
+.searchbar
+{
+      width: 47%;
+      margin-left: 21%;
+    margin-bottom: 50%;
+
+}
+.j
+{
+    margin-left: 160px;
+    color : black ;
+}
+.main
+{
+    display : flex ;
+    background-color : white ;
+
+}
+.filter
+{
+    margin-left : 0px;
+    width : 350px ;
+    height : 500px ; 
+    background-color: navy;
+
+    }
+.x
+{
+    background-color : white ;
+    display: flex;  
+
+}
+.sub-box
+{
+    margin-top : 10px ;
+    margin-left : 15px ;
+    width : 250px ;
+    height : 230px;
+    background-color:white;
+    border-radius: 10px;
+
+}
+.g
+{
+    margin-left:20px;
+}
+.d1
+{
+    margin-left:20px ;
+}
+nav a:hover{
+	background-color:black;
+	color:white;
+}
+.t
+{
+    margin-left:0px;
+}
+.im{
+height:230px;
+}

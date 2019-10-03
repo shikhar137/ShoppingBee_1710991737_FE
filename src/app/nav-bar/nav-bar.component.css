@@ -1,0 +1,38 @@
+.base{
+    height : 60px ; 
+    width : 100% ;
+    background-color:navy ;
+}
+.q
+{
+color:white;
+}
+.t1
+{
+    color: white;
+}
+.view
+{
+    display : flex ;
+}
+.cart
+{
+    margin-top : 20px ;
+    margin-left : 660px ;
+    height : 40px ;
+}
+.align
+{
+    margin-left: 10px;
+    height:40px;
+    margin-top: 20px;
+}
+.slogan
+{
+    color : white ;
+}
+.sbutton
+{
+    color :white ;
+}
+
