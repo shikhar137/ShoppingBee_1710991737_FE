@@ -12,19 +12,19 @@
 <nav class="navbar navbar-expand-sm bg-light ">
     <ul class="navbar-nav t">
         <li class="nav-item">
-            <a class="nav-link j " href="#"><i class= "fa fa-home" style="font-size:22px"></i>&nbsp;&nbsp;Home</a>
+            <a class="nav-link j "><i class= "fa fa-home" style="font-size:22px"></i>&nbsp;&nbsp;Home</a>
         </li>
         <li class="nav-item">
-              <a class="nav-link j" href="#"><i class= "fa fa-television" style="font-size:22px"></i>&nbsp;&nbsp;Electronics</a>
+              <a class="nav-link j" (click)="showCategory('Electronics')"><i class= "fa fa-television" style="font-size:22px"></i>&nbsp;&nbsp;Electronics</a>
           </li>
           <li class="nav-item">
-                  <a class="nav-link j" href="#"><i class= "fa fa-yelp" style="font-size:22px"></i>&nbsp;&nbsp;Clothing</a>
+                  <a class="nav-link j" (click)="showCategory('Clothing')"><i class= "fa fa-yelp" style="font-size:22px"></i>&nbsp;&nbsp;Clothing</a>
               </li>
               <li class="nav-item">
-                      <a class="nav-link j" href="#"><i class= "fa fa-soccer-ball-o" style="font-size:22px"></i>&nbsp;&nbsp;Sports</a>
+                      <a class="nav-link j"(click)="showCategory('Sports')"><i class= "fa fa-soccer-ball-o" style="font-size:22px"></i>&nbsp;&nbsp;Sports</a>
                   </li>
                   <li class="nav-item">
-                          <a class="nav-link j" href="#"><i class= "fa fa-book" style="font-size:22px"></i>&nbsp;&nbsp;Books</a>
+                          <a class="nav-link j" (click)="showCategory('Books')"><i class= "fa fa-book" style="font-size:22px"></i>&nbsp;&nbsp;Books</a>
                       </li>
     </ul>
 </nav>
@@ -36,10 +36,13 @@
             <br>
             <form class="g">
 
-                    <input type="checkbox" name="range" value="0">&nbsp;&nbsp;&nbsp;<b>0-500</b><br /><br />
-                    <input type="checkbox" name="range" value="0">&nbsp;&nbsp;&nbsp;<b>500-1000</b><br /><br />
-                    <input type="checkbox" name="range" value="0">&nbsp;&nbsp;&nbsp;<b>1000-2000</b><br /><br />
-                    <input type="checkbox" name="range" value="0">&nbsp;&nbsp;&nbsp;<b>More Than 2000</b><br /><br />
+                   
+<input type="radio" (change)="showpricefilters($event, 0 , 500)" name="range" value="0">&nbsp;&nbsp;&nbsp;<b>0-500</b><br /><br />
+<input type="radio" (change)="showpricefilters($event, 500 , 1000)" name="range" value="0">&nbsp;&nbsp;&nbsp;<b>500-1000</b><br /><br />
+<input type="radio" (change)="showpricefilters($event, 1000 , 2000)" name="range" value="0">&nbsp;&nbsp;&nbsp;<b>1000-2000</b><br /><br />
+<input type="radio" (change)="showpricefilters($event, 2000 , 7000)" name="range" value="0">&nbsp;&nbsp;&nbsp;<b>2000-7000</b><br /><br />
+<input type="radio" (change)="showpricefilters($event, 7000 , 15000)" name="range" value="0">&nbsp;&nbsp;&nbsp;<b>7000-15000</b><br /><br />
+<input type="radio" (change)="showpricefilters($event, 15000 , 100000)" name="range" value="0">&nbsp;&nbsp;&nbsp;<b>15000 Above</b><br /><br />
                 
                 </form>
         </div>
@@ -47,12 +50,12 @@
     <div class="container-fluid">
             <div class="row my-5">
             
-                  <div class="col-md-3" *ngFor="let y of products">
+                  <div class="col-md-3" *ngFor="let y of result">
                   <div class="card" >
-              <img class="card-img-top im"  src="../../assets/Images/{{y.image}}" style="width:100%">
+              <img class="card-img-top im"  src="../../assets/Images/{{y.pimage}}" style="width:100%">
               <div class="card-body">
-              <h2 class="card-title" (click)="onclick1(y.id)"> {{y.name}} </h2>
-              <p class="card-text" style="color: grey;"> Rs. {{y.price}}</p>
+              <h2 class="card-title" (click)="onclick1(y.id)"> {{y.productName}} </h2>
+              <p class="card-text" style="color: grey;"> Rs. {{y.productPrice}}</p>
               <p class="card-text">{{y.price}}</p>
               <button class="btn btn-primary" (click)="addtocart(d.id)">Add to Cart</button>
               </div>

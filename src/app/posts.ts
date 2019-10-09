@@ -1,10 +1,10 @@
 export class posts 
 {
     constructor(
-        public name : string,
+        public username : string,
+        public active : number ,
         public password : string ,
-        public email : string ,
-        public number : string 
+        public role : string 
     )
     {}
 }

@@ -1,0 +1,60 @@
+.base{
+    height : 60px ; 
+    width : 100% ;
+    background-color:navy ;
+}
+.q
+{
+color:white;
+}
+.searchbar
+{
+    margin-left : 30px;
+    width:600px;
+}
+.t1
+{
+    color: white;
+}
+.t
+{
+    margin-left:0px;
+}
+.j
+{
+    margin-left: 160px;
+    color : black ;
+}
+nav a:hover{
+	background-color:black;
+	color:white;
+}
+.h
+{
+    height:45px;
+}
+.view
+{
+    display : flex ;
+}
+.align
+{
+    margin-top : 20px ;
+    margin-left : 350px ;
+    height : 40px ;
+}
+.next
+{
+    margin-left: 10px;
+    height:40px;
+    margin-top: 20px;
+}
+.slogan
+{
+    color : white ;
+}
+.sbutton
+{
+    color :white ;
+}
+

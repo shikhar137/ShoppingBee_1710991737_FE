@@ -14,6 +14,7 @@ import { LoginComponent } from './login/login.component';
 import { MyProfileComponent } from './my-profile/my-profile.component';
 import { HttpClientModule, HttpHeaders } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { FormsModule } from '@angular/forms';
     SignUpComponent,
     UserCartComponent,
     MyProfileComponent,
+    MainComponent,
   ],
   imports: [
     BrowserModule,

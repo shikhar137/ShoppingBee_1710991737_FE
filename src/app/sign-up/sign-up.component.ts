@@ -10,7 +10,7 @@ import { posts } from '../posts';
 })
 export class SignUpComponent implements OnInit {
   DATA : any;
-post1=new posts("" , "" , "" , "");
+post1=new posts("" , 0 , "" , "");
   constructor(private service:GetUserService) { }
 
   ngOnInit() {

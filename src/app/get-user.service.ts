@@ -11,6 +11,6 @@ export class GetUserService {
   post1_user( posts : posts )
   {
     console.log(posts);
-    return this.http.post<any>('http://localhost:8080/users/post1' , posts , { headers :new HttpHeaders({ 'Content-Type': 'application/json'})});
+    return this.http.post<any>('http://localhost:8080/auth/addUsers' , posts , { headers :new HttpHeaders({ 'Content-Type': 'application/json'})});
   }
 }
