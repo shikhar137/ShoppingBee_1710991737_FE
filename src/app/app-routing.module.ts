@@ -7,9 +7,11 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { UserCartComponent } from './user-cart/user-cart.component';
 import { MyProfileComponent } from './my-profile/my-profile.component';
 import { MainComponent } from './main/main.component';
+import { OrderhistoryComponent } from './orderhistory/orderhistory.component';
+import { AdditemComponent } from './additem/additem.component';
 
 const routes: Routes = [
-  {path:'',redirectTo:'/home',pathMatch:'full'},
+  {path:'',redirectTo:'/login',pathMatch:'full'},
   {path:'login',component:LoginComponent},
   {path:'home',component:HomePageComponent},
   {path:'signup',component:SignUpComponent},
@@ -17,6 +19,8 @@ const routes: Routes = [
   { path:'usercart',component:UserCartComponent},
   { path: 'profile',component:MyProfileComponent},
   { path: 'main' , component: MainComponent },
+  { path: 'orderhistory' , component : OrderhistoryComponent},
+  { path: 'additem' , component : AdditemComponent},
 ];
 
 @NgModule({

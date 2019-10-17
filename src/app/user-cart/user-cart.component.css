@@ -11,6 +11,15 @@
 .category_block li:hover a {
     color: #ffffff;
 }
+.j
+{
+    height: 100px;
+    width: 100px;
+}
+.k
+{
+    display:flex;
+}
 .category_block li a {
     color: #343a40;
 }
@@ -58,7 +67,7 @@ footer a {
 .y
 {
     background-color: white;
-    height:480px;
+  height: 1000px;
     border-radius: 20px;
 }
 .searchbar

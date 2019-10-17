@@ -30,6 +30,9 @@
     display: flex;  
 
 }
+.carousel-inner{
+    height:350px;
+}
 .sub-box
 {
     margin-top : 10px ;

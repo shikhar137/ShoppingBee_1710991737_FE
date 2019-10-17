@@ -10,6 +10,7 @@ color:white;
 .t1
 {
     color: white;
+    margin-top:10px;
 }
 .view
 {
@@ -17,15 +18,24 @@ color:white;
 }
 .cart
 {
-    margin-top : 20px ;
-    margin-left : 660px ;
+    margin-top : 10px ;
+    margin-left : 300px ;
     height : 40px ;
+  
 }
+
 .align
 {
     margin-left: 10px;
     height:40px;
-    margin-top: 20px;
+    margin-top: 10px;
+}
+.searchbar
+{
+    margin-left : 30px;
+    width:600px;
+    
+    margin-top:10px;
 }
 .slogan
 {

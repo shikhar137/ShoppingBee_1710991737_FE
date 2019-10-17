@@ -20,4 +20,20 @@ logout()
   this.router.navigate(['login']);
 
 }
+cart()
+{
+  this.router.navigate(['/usercart']);
+}
+showcart()
+{
+  this.router.navigate(['/usercart']);
+}
+showprofile()
+{
+  this.router.navigate(['/profile']);
+}
+addp()
+{
+  this.router.navigate(['/addproduct']);
+}
 }

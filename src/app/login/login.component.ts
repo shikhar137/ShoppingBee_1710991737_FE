@@ -22,13 +22,18 @@ password ;
   }
 login()
 {
+  console.log(this.username);
+  console.log(this.password);
   this.authService.authenticate( this.username , this.password ).subscribe (
     data =>
     {
+
       this.service.isLoggedIn(true);
-      this.router.navigate(['/home']);
+      this.router.navigate(['home']);
     }
 
   );
 }
+
 }
+

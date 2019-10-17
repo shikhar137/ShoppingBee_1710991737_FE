@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GetUserService } from '../get-user.service';
 import { posts } from '../posts';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -10,18 +11,19 @@ import { posts } from '../posts';
 })
 export class SignUpComponent implements OnInit {
   DATA : any;
-post1=new posts("" , 0 , "" , "");
-  constructor(private service:GetUserService) { }
+post1=new posts("" , 1 , "" , "");
+  constructor(private service:GetUserService , private router: Router) { }
 
   ngOnInit() {
   }
 Onsubmit()
 {
- location.assign('/login');
+ 
 
   this.service.post1_user(this.post1).subscribe(
     data => console.log("SUCCESS", data),
     error => console.log("ERROR",error)
   )
+  this.router.navigate(['login']);
 }
 }

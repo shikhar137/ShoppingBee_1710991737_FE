@@ -12,7 +12,10 @@ export class AuthenticationService {
   constructor( private http:HttpClient) { }
   authenticate( username , password )
   {
-    const headers = new HttpHeaders( { Authorization : 'Basic ' + btoa(username + ':' + password )});
+   // const token = sessionStorage.getItem("token");
+    // const headers = new HttpHeaders( { Authorization : 'Basic ' + token });
+
+   const headers = new HttpHeaders( { Authorization : 'Basic ' + btoa(username + ':' + password )});
     return this.http.get('http://localhost:8080/auth/validuser',{headers}).pipe(
       map( data =>
         {

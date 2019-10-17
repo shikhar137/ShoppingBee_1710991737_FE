@@ -15,6 +15,8 @@ import { MyProfileComponent } from './my-profile/my-profile.component';
 import { HttpClientModule, HttpHeaders } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { MainComponent } from './main/main.component';
+import { OrderhistoryComponent } from './orderhistory/orderhistory.component';
+import { AdditemComponent } from './additem/additem.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { MainComponent } from './main/main.component';
     UserCartComponent,
     MyProfileComponent,
     MainComponent,
+    OrderhistoryComponent,
+    AdditemComponent,
   ],
   imports: [
     BrowserModule,

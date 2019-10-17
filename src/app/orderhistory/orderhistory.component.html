@@ -1,0 +1,53 @@
+<app-nav-bar></app-nav-bar>
+
+
+<body>
+    
+   
+    <div class="container-fluid d">
+        <div class="table-wrapper">
+            <div class="table-title j">
+                <div class="row ">
+                    <div class="col-sm-4 ">
+						<h2>Order <b>Details</b></h2>
+					</div>
+					
+                </div>
+            </div>
+			<div class="table-filter">
+				<div class="row">
+                    
+                   
+                </div>
+			</div>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th class="text-center" ></th>
+						<th class="text-center" ><h4><b>Product Name</b></h4></th>
+						<th class="text-center" ><h4><b>Quantity</b></h4></th>						
+                        <th class="text-center" ><h4><b>Expected Delivery</b></h4></th>						
+						<th class="text-center"><h4><b>Net Amount</b></h4></th>
+						
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr *ngFor = " let cart of cart ">
+                                <td class ="text-center"><img src="../../assets/Images/{{cart.products.pimage}}" style="width:150px ; height : 200px " /></td>
+                                <td class="text-center">{{cart.products.productName}}</td>
+                                    <td class="text-center">{{cart.quantity}}</td>
+                                    <td class="text-center">{{cart.date}}</td>
+                                <td class="text-center">{{cart.products.productPrice*cart.quantity}}</td>
+                                
+      
+                               
+                            </tr>
+                       
+                </tbody>
+            </table>
+			
+        </div>
+    </div>  
+   
+</body>
+                                		                            

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { DataService } from '../data.service';
+import { HttpService } from '../http.service';
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
@@ -8,7 +9,7 @@ import { DataService } from '../data.service';
 })
 export class HomePageComponent implements OnInit {
 result:any;
-  constructor(private activatedroute: ActivatedRoute , private dataservice: DataService, private router:Router) { 
+  constructor(private activatedroute: ActivatedRoute , private dataservice: DataService, private router:Router , private service1:HttpService) { 
     this.dataservice.products().subscribe(res => { this.result = res; console.log(this.result) })
   }
   
@@ -34,5 +35,13 @@ result:any;
   {
     this.dataservice.getBypricefilter(number1,number2).subscribe( (data) => { this.result = data ; });
   }
+  addProduct(pid)
+  {
+    this.service1.addProductToCart(pid).subscribe((data) => 
+    { console.log(data);
+      alert(" Success !! Product Is Added To The Cart");
+  });
+
+}
 
 }
