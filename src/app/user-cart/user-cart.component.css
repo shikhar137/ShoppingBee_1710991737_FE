@@ -77,6 +77,40 @@ footer a {
     margin-bottom: 50%;
 
 }
+.cart
+{
+    margin-top : 10px ;
+    margin-left : 300px ;
+    height : 40px ;
+  
+}
+.base{
+    height : 60px ; 
+    width : 100% ;
+    background-color:navy ;
+}
+.align
+{
+    margin-left: 10px;
+    height:40px;
+    margin-top: 10px;
+}
+.t1
+{
+    color: white;
+    margin-top:10px;
+}
+.view
+{
+    display : flex ;
+}
+.searchbar
+{
+    margin-left : 30px;
+    width:600px;
+    
+    margin-top:10px;
+}
 .n
 {
 

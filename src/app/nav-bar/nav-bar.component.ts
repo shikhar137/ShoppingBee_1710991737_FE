@@ -34,6 +34,6 @@ showprofile()
 }
 addp()
 {
-  this.router.navigate(['/addproduct']);
+  this.router.navigate(['addproduct']);
 }
 }

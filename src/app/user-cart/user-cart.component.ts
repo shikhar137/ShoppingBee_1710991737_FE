@@ -19,7 +19,7 @@ i;
     {
       this.cart = data ;
       this.findtotal();
-      this.findtotal1();
+      
     })
   }
   deleteproduct(id)
@@ -30,20 +30,20 @@ i;
   });
 
 }
-decreaseproduct(rid:number)
+decreaseproduct(rid)
 {
   this.service.removeproductFromCart(rid).subscribe( ( data ) =>
   {
-    this.service.showcart().subscribe( (data2) => { this.cart = data2 ; this.findtotal1()})
+    this.service.showcart().subscribe( (data2) => { this.cart = data2 ; this.findtotal()})
   });
 
 }
-increaseproduct(aid:number)
+increaseproduct(aid)
 {
   this.service.addProductToCart(aid).subscribe( ( data ) =>
   {
     this.service.showcart().subscribe( (data3) => { this.cart = data3 ; this.findtotal()});
-    this.ngOnInit;
+ 
   });
 
 }
@@ -55,14 +55,7 @@ findtotal()
     this.total += this.cart [ this.i ].items.productPrice * this.cart[this.i].quantity ;
   }
 }
-findtotal1()
-{
-  this.total=0;
-  for( this.i=0 ; this.i<this.cart.length ; this.i++ )
-  {
-    this.total = this.cart [ this.i ].items.productPrice * this.cart[this.i].quantity - this.total;
-  }
-}
+
 checkOut()
 {
   this.service.checkout().subscribe((data5) => 
@@ -70,5 +63,6 @@ checkOut()
     this.route.navigate(['/orderhistory']);
   })
 }
+
 
 }

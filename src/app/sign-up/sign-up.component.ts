@@ -10,20 +10,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./sign-up.component.css']
 })
 export class SignUpComponent implements OnInit {
-  DATA : any;
-post1=new posts("" , 1 , "" , "");
+  data : any;
+post1=new posts("" , 1 , "" , "fff");
   constructor(private service:GetUserService , private router: Router) { }
 
   ngOnInit() {
   }
-Onsubmit()
+onsubmit()
 {
  
-
-  this.service.post1_user(this.post1).subscribe(
+  this.router.navigate(['login']);
+  this.service.post1_auth(this.post1).subscribe(
     data => console.log("SUCCESS", data),
     error => console.log("ERROR",error)
   )
-  this.router.navigate(['login']);
+  
 }
 }

@@ -45,7 +45,7 @@
 				</div>
 			</div>
 			<div class="card-body">
-				<form #userForm="ngForm" (ngSubmit)="Onsubmit() ">
+				<form #userForm="ngForm" (ngSubmit)="onsubmit() ">
 
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
@@ -58,7 +58,7 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
-                        <input type="password" class="form-control" placeholder="Password"  name="password" [(ngModel)]="post1.password"><br>
+                        <input type="password" class="form-control" placeholder="Password"  name="passwords" [(ngModel)]="post1.password"><br>
                     </div>
                     <div class="input-group form-group">
                             <div class="input-group-prepend">
